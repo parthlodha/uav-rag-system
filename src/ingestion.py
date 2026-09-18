@@ -1,5 +1,5 @@
 import os
-from recursive_character_text_splitter import RecursiveCharacterTextSplitter
+from transformers import RecursiveCharacterTextSplitter
 from transformers import HuggingFaceEmbeddings
 
 def ingestion(filename, sanitized):
