@@ -1,5 +1,6 @@
 import os
 from BAAI.bge_small_en_v1_5 import BAAI_bge_small_en_v1_5
+import vector_db  # Add this line
 
 def app(query, top_k):
     embeddings = BAAI_bge_small_en_v1_5()
