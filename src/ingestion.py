@@ -1,5 +1,5 @@
 import os
-from RecursiveCharacterTextSplitter import RecursiveCharacterTextSplitter
+from recursive_character_text_splitter import RecursiveCharacterTextSplitter
 
 def ingestion(filename, sanitized):
     try:
