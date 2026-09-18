@@ -1,5 +1,6 @@
 import os
 from recursive_character_text_splitter import RecursiveCharacterTextSplitter
+from transformers import HuggingFaceEmbeddings
 
 def ingestion(filename, sanitized):
     try:
@@ -11,12 +12,9 @@ def ingestion(filename, sanitized):
         chunks = splitter.split(sanitized)
         for i, chunk in enumerate(chunks):
             chunk['metadata'] = doc['page_content']
-            # ... rest of code ...
         if os.path.exists('vectorstore/'):
             os.system('rm -rf vectorstore/')
-        # ... rest of code ...
-        embeddings = 'BAAI/bge-small-en-v1.5'
-        encode_kwargs = {'normalize_embeddings': True}
+        embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en-v1.5", encode_kwargs={'normalize_embeddings': True})
         # ... rest of code ...
     except Exception as e:
         print(f"Error: {e}")
