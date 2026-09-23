@@ -1,0 +1,12 @@
+# Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Vector Database (Rebuild on target system using python3 src/ingestion.py)
+vectorstore/
+
+# OS and IDE settings
+.vscode/
+.DS_Store
+*.log

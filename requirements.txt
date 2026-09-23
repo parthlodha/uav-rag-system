@@ -1,0 +1,13 @@
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-huggingface>=0.0.1
+langchain-text-splitters
+chromadb>=0.5.0
+sentence-transformers
+pypdf
+streamlit
+plotly
+scikit-learn
+pandas
+numpy
+torchvision
